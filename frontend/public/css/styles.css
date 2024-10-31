@@ -1,0 +1,230 @@
+/* Reset y configuración básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #0e1a25; /* Fondo oscuro */
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Barra de navegación */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.logo {
+  color: #00e676;
+  font-size: 1.5em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Sección principal */
+.hero-section {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(160deg, #003a6e, #006d3e);
+}
+
+.hero-section h2 {
+  font-size: 3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero-section h2 span {
+  color: #00e676;
+}
+
+.hero-section p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero-section h3 {
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  color: #a4a9ad;
+}
+
+.search-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #1e2a38;
+  border-radius: 20px;
+  padding: 5px;
+}
+
+.search-container input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  width: 300px;
+  outline: none;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: #00e676;
+  border: none;
+  border-radius: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.subtext {
+  font-size: 1em;
+  color: #a4a9ad;
+  margin-top: 10px;
+}
+
+.subtext a {
+  color: #00e676;
+  text-decoration: none;
+}
+
+/* Sección de Escuelas */
+.schools-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px 20px;
+}
+
+.school-card {
+  background-color: #1e2a38;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #00e676;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.view-more {
+  text-align: center;
+  margin-top: 30px;
+  color: #00e676;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #1e2a38; /* Fondo oscuro a tono con el index */
+  color: #ffffff;
+  transition: right 0.3s ease;
+  padding: 20px;
+  box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.sidebar h2 {
+  color: #00e676; /* Verde para el título de Iniciar Sesión */
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+/* Clase que activa el sidebar */
+.sidebar.active {
+  right: 0; /* Hace que el sidebar se muestre en la pantalla */
+}
+
+.sidebar form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.sidebar input[type="text"],
+.sidebar input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1e2a38; /* Fondo de los campos en tono oscuro */
+  color: #ffffff;
+  font-size: 1em;
+}
+
+.sidebar button[type="submit"] {
+  padding: 10px;
+  background-color: #00e676;
+  border: none;
+  border-radius: 5px;
+  color: #000000; /* Contraste con el fondo */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sidebar p {
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.sidebar p a {
+  color: #00e676; /* Verde para el enlace de registro */
+  text-decoration: none;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #00e676;
+  font-size: 1.5em;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+/* Clase que activa el overlay */
+.overlay.active {
+  display: block;
+}

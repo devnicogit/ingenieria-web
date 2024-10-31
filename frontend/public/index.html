@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La escuela de tecnología de Latinoamérica</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Barra de navegación -->
+    <header>
+      <nav class="nav-bar">
+        <h1 class="logo">Plataforma Web</h1>
+        <ul class="nav-links">
+          <li><a href="planes.html">Planes</a></li>
+          <li><a href="#" id="show-login">Acceder</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Sección principal -->
+    <section class="hero-section">
+      <h2>La escuela de tecnología <br> de <span>Latinoamérica</span></h2>
+      <p>Los mejores cursos de programación, diseño y economía digital</p>
+      <h3>¿Qué quieres aprender?</h3>
+      <div class="search-container">
+        <input type="text" placeholder="Liderazgo y Management">
+        <button>🔍</button>
+      </div>
+      <p class="subtext">Empieza cualquier curso sin costo</p>
+    </section>
+
+    <!-- Sección de Escuelas -->
+    <section class="schools-section">
+      <div class="school-card">Data Science e Inteligencia Artificial</div>
+      <div class="school-card">Ciberseguridad</div>
+      <div class="school-card">Liderazgo y Management</div>
+      <div class="school-card">English Academy</div>
+      <div class="school-card">Desarrollo Web</div>
+      <div class="school-card">Marketing Digital</div>
+      <div class="school-card">Producto</div>
+      <div class="school-card">Contenido Audiovisual</div>
+    </section>
+
+    <p class="view-more">Ver todas las escuelas ▼</p>
+  </div>
+
+  <!-- Sidebar de login y registro -->
+  <div id="login-sidebar" class="sidebar">
+    <button id="close-sidebar" class="close-btn">✖</button>
+    
+    <!-- Formulario de Inicio de Sesión -->
+    <div id="login-section">
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm">
+        <input type="text" id="loginUsername" placeholder="Usuario" required>
+        <input type="password" id="loginPassword" placeholder="Contraseña" required>
+        <button type="submit">Ingresar</button>
+      </form>
+      <p>¿No tienes una cuenta? <a href="#" id="show-register">Regístrate aquí</a></p>
+    </div>
+
+    <!-- Formulario de Registro -->
+    <div id="register-section" style="display: none;">
+      <h2>Registro</h2>
+      <form id="registerForm">
+        <input type="text" id="registerUsername" placeholder="Usuario" required>
+        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+        <input type="date" id="birthDate" required>
+        <input type="text" id="phone" placeholder="Teléfono" required>
+        <input type="text" id="address" placeholder="Dirección" required>
+        <button type="submit">Registrarse</button>
+      </form>
+      <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+    </div>
+  </div>
+
+  <!-- Overlay oscuro para el sidebar -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="admin-container">
+    <h1>Panel de Administrador</h1>
+    <nav>
+      <button onclick="showSection('users')">Gestión de Usuarios</button>
+      <button onclick="showSection('courses')">Gestión de Cursos</button>
+      <button onclick="showSection('requests')">Bandeja de Solicitudes</button>
+    </nav>
+
+    <!-- Gestión de Usuarios -->
+    <section id="users" class="admin-section">
+      <h2>Usuarios Registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="userList">
+          <!-- Aquí se cargan los usuarios dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Gestión de Cursos -->
+    <section id="courses" class="admin-section" style="display:none;">
+      <h2>Gestión de Cursos</h2>
+      <form id="courseForm">
+        <input type="text" placeholder="Nombre del curso" id="courseName">
+        <textarea placeholder="Descripción" id="courseDescription"></textarea>
+        <input type="number" placeholder="Precio" id="coursePrice">
+        <button type="submit">Guardar Curso</button>
+      </form>
+
+      <h3>Cursos Actuales</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Curso</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="courseList">
+          <!-- Aquí se cargan los cursos dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Bandeja de Solicitudes -->
+    <section id="requests" class="admin-section" style="display:none;">
+      <h2>Solicitudes de Becas y Certificados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Usuario</th>
+            <th>Tipo de Solicitud</th>
+            <th>Detalles</th>
+          </tr>
+        </thead>
+        <tbody id="requestList">
+          <!-- Aquí se cargan las solicitudes dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

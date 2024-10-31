@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compra de Plan - Plataforma de Ingeniería Web</title>
+  <link rel="stylesheet" href="css/comprar.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sección de Autenticación -->
+    <section id="login-section" class="auth-section">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Correo electrónico" required>
+            <input type="password" id="loginPassword" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p>¿No tienes una cuenta? <a href="#" id="show-register">Regístrate aquí</a></p>
+    </section>
+    
+    <section id="register-section" class="auth-section" style="display: none;">
+        <h2>Registro</h2>
+        <form id="registerForm">
+            <input type="text" id="registerUsername" placeholder="Nombre de usuario" required>
+            <input type="password" id="registerPassword" placeholder="Contraseña" required>
+            <input type="date" id="birthDate" placeholder="Fecha de nacimiento" required>
+            <input type="text" id="phone" placeholder="Teléfono" required>
+            <input type="text" id="address" placeholder="Dirección" required>
+            <button type="submit">Registrarse</button>
+        </form>
+        <p>¿Ya tienes una cuenta? <a href="#" id="show-login">Inicia sesión aquí</a></p>
+    </section>
+    
+    
+
+    <!-- Sección de Información del Plan -->
+    <section class="plan-section">
+      <div id="dynamic-plan-section">
+        <!-- Aquí se mostrará el contenido del plan dinámicamente -->
+      </div>
+    </section>
+
+    <!-- Sección de Pago -->
+    <section id="payment-section">
+      <h2>Información de Pago</h2>
+      <form id="paymentForm">
+        <label for="card-name">Nombre en la tarjeta</label>
+        <input type="text" id="card-name" required>
+        <label for="card-number">Número de tarjeta</label>
+        <input type="text" id="card-number" required>
+        <label for="expiration-date">Fecha de expiración</label>
+        <input type="text" id="expiration-date" placeholder="MM/AA" required>
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" required>
+        <button type="submit">Pagar</button>
+      </form>
+    </section>
+  </div>
+
+    <!-- Animación de carga -->
+    <div id="loading-animation" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Validando su tarjeta...</p>
+    </div>
+
+    <!-- Animación de éxito -->
+    <div id="success-animation" class="success-overlay" style="display: none;">
+        <p>¡Suscripción exitosa!</p>
+    </div>
+
+
+  <script src="js/comprar.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- perfil.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <main class="profile-main">
+        <section class="profile-info">
+            <h1>Perfil de Usuario</h1>
+            <p>Nombre de usuario: <span id="username"></span></p>
+            <p>Plan actual: <span id="plan"></span></p>
+            <p>Teléfono: <span id="phone"></span></p>
+            <p>Dirección: <span id="address"></span></p>
+            <p>Fecha de nacimiento: <span id="birthdate"></span></p>
+            <a href="dashboard.html">Volver al Dashboard</a>
+        </section>
+
+        <section class="enrolled-courses">
+            <h2>Cursos Inscritos</h2>
+            <div id="courses-container">
+                <!-- Los cursos inscritos se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+    <script src="js/perfil.js"></script>
+</body>
+</html>

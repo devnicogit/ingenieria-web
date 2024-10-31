@@ -1,0 +1,327 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #0f1e29;
+    color: #ffffff;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1e2d3d;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar .logo {
+    font-size: 1.5rem;
+    color: #00e676;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .sidebar nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .sidebar nav ul li a:hover {
+    color: #00e676;
+  }
+
+  /* Perfil en el header */
+.profile-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .profile-pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 1rem;
+    border: 2px solid #00e676;
+  }
+  
+  .profile-name {
+    color: #ffffff;
+    margin-left: 0.5rem;
+  }
+  
+  /* Menú desplegable del perfil */
+  .profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #1e2d3d;
+    padding: 1rem;
+    width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+  
+  .profile-dropdown p {
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .profile-dropdown p.profile-plan {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-dropdown a {
+    display: block;
+    color: #00e676;
+    text-decoration: none;
+    margin: 0.5rem 0;
+  }
+  
+  .profile-dropdown a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mostrar el menú desplegable */
+  .profile-container:hover .profile-dropdown {
+    display: block;
+  }
+  
+  
+  /* Contenido principal */
+  .main-content {
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  
+  .main-content header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .search-bar {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  /* Cursos */
+  .courses-section,
+  .routes-section,
+  .schools-section {
+    margin-bottom: 2rem;
+  }
+  
+  .courses-section h2,
+  .routes-section h2,
+  .schools-section h2 {
+    font-size: 1.5rem;
+    color: #00e676;
+    margin-bottom: 1rem;
+  }
+  
+  .course-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  
+  .course-item {
+    background-color: #1e2d3d;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    min-width: 200px;
+  }
+  
+  .course-item img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .route-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  
+  .route-item {
+    background-color: #1e2d3d;
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 200px;
+  }
+  
+  /* Escuelas */
+  .schools-list {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+  }
+  
+  .schools-list a {
+    padding: 0.5rem 1rem;
+    background-color: #2b3a4a;
+    color: #00e676;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .schools-list a:hover {
+    background-color: #00e676;
+    color: #0f1e29;
+  }
+
+.all-courses-section {
+    margin-top: 2rem;
+}
+
+#courses-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Estilos para el contenedor de sugerencias */
+.suggestions {
+  position: absolute;
+  background-color: #1e2d3d;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 0.5rem; /* Asegura que aparezca justo debajo del input */
+  z-index: 100;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Permite el desplazamiento si hay muchas sugerencias */
+  max-height: 200px; /* Define una altura máxima para el contenedor */
+}
+
+/* Estilo para cada sugerencia individual */
+.suggestion-item {
+  padding: 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #00e676;
+  color: #0f1e29;
+}
+
+/* Estructura del contenedor de cursos */
+/* Estilos para el contenedor principal de cursos */
+.all-courses-section {
+  margin-top: 2rem;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Estilos para las cards de cursos */
+.course-card {
+  background-color: #1e2d3d;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  color: #00e676;
+}
+
+.course-card p {
+  font-size: 0.9rem;
+  color: #dddddd;
+}
+
+.course-card button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #00e676;
+  border: none;
+  border-radius: 5px;
+  color: #0f1e29;
+  cursor: pointer;
+}
+
+.course-detail {
+  padding: 20px;
+  color: #ffffff;
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  background-color: #1e2d3d;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.course-icon {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+}
+
+.course-info h1 {
+  font-size: 2rem;
+  color: #00e676;
+}
+
+#enroll-button {
+  background-color: #00e676;
+  color: #0f1e29;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#enroll-button:hover {
+  background-color: #007f4f;
+}
+
+
+
+
+  

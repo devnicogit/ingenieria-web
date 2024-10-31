@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel de Superadministrador</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="superadmin-container">
+    <h1>Panel de Superadministrador</h1>
+    <nav>
+      <button onclick="showSection('admins')">Gestión de Administradores</button>
+      <button onclick="showSection('stats')">Estadísticas</button>
+    </nav>
+
+    <!-- Gestión de Administradores -->
+    <section id="admins" class="superadmin-section">
+      <h2>Administradores Registrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="adminList">
+          <!-- Aquí se cargan los administradores dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Estadísticas -->
+    <section id="stats" class="superadmin-section" style="display:none;">
+      <h2>Estadísticas de la Plataforma</h2>
+      <div class="stats-overview">
+        <p>Cuentas Creadas: <span id="totalAccounts">0</span></p>
+        <p>Ingresos Totales: <span id="totalRevenue">0</span></p>
+        <p>Planes Adquiridos: <span id="totalPlans">0</span></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/superadmin.js"></script>
+</body>
+</html>

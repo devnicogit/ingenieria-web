@@ -1,0 +1,193 @@
+/* Fondo de pantalla completa */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0e1a25; /* Color de fondo oscuro */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    gap: 50px;
+}
+
+/* Estilo para las secciones de login y registro */
+.auth-section, .plan-section, #payment-section {
+    background-color: #1e2a38;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+  }
+  
+  .auth-section h2, .plan-section h2, #payment-section h2 {
+    color: #00e676;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .auth-section input, #payment-section input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+  }
+  
+  .auth-section button, #payment-section button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00e676;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .auth-section p a, #payment-section p a {
+    color: #00e676;
+    text-decoration: none;
+  }
+  
+  .auth-section p {
+    text-align: center;
+  }
+/* Sección de Información del Plan */
+.plan-section {
+    background-color: #1e2a38;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+.plan-section h2 {
+    color: #00e676;
+}
+
+.plan-section p {
+    font-size: 1.1em;
+}
+
+.plan-section ul {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.plan-section ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.plan-section ul li::before {
+    content: "✓";
+    color: #00e676;
+    position: absolute;
+    left: 0;
+}
+
+/* Sección de Pago */
+#payment-section {
+    background-color: #1e2a38;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+#payment-section h2 {
+    color: #00e676;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#payment-section p {
+    font-size: 1em;
+    text-align: center;
+    color: #b0bec5;
+}
+
+#payment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+#payment-section form label {
+    color: #b0bec5;
+    margin-top: 10px;
+}
+
+#payment-section form input {
+    margin-bottom: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #263545;
+    color: #ffffff;
+}
+
+#payment-section form button {
+    padding: 12px;
+    background-color: #00c853;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#payment-section form button:hover {
+    background-color: #00b248;
+}
+
+/* Animación de carga */
+.loading-overlay, .success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #00e676;
+    font-size: 1.5em;
+    z-index: 1000;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #00e676;
+    border-top: 5px solid #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mensaje de éxito */
+.success-overlay p {
+    font-size: 2em;
+    color: #00e676;
+    text-align: center;
+}
+

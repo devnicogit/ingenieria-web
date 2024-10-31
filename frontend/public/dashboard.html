@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Plataforma de Ingeniería Web</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body onload="checkAuth()"> <!-- Llama a checkAuth al cargar la página para proteger la ruta -->
+  <!-- Contenedor principal oculto inicialmente -->
+
+  <!-- Sidebar de navegación -->
+  <aside class="sidebar">
+    <div class="logo">
+      <h1>Plataforma</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Mis Rutas</a></li>
+        <li><a href="#">Mi Progreso</a></li>
+        <li><a href="#">Chat ADA</a></li>
+        <li><a href="#">Notificaciones</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <header>
+      <div style="position: relative; max-width: 300px;">
+        <input type="text" id="search-bar" placeholder="¿Qué quieres aprender?" class="search-bar">
+        <div id="suggestions-container" class="suggestions"></div>
+      </div>
+      <!-- Contenedor de Perfil -->
+      <div class="profile-container">
+        <img src="images/profile.jpg" alt="Perfil de Usuario" class="profile-pic">
+        <span id="profile-name" class="profile-name">NombreUsuario</span>
+        <div class="profile-dropdown">
+          <p id="profile-greeting">Hola <span id="user-name">NombreUsuario</span></p>
+          <p id="user-plan" class="profile-plan">Plan: Básico</p>
+          <a href="perfil.html" id="view-profile">Ver mi perfil</a>
+          <a href="admin-panel.html" id="admin-panel-link" style="display: none;">Ver panel de administrador</a>
+          <a href="#" id="logout">Cerrar sesión</a>
+        </div>
+      </div>
+    </header>
+    
+    
+
+    <!-- <section class="courses-section">
+      <h2>Cursos que estás tomando</h2>
+      <div class="course-list">
+        <div class="course-item">
+          <img src="images/curso1.jpg" alt="Curso 1">
+          <p>Clase 3 de 20</p>
+          <h3>¿Qué es DevOps?</h3>
+        </div>
+        <div class="course-item">
+          <img src="images/curso2.jpg" alt="Curso 2">
+          <p>Clase 8 de 15</p>
+          <h3>Seguridad e Identidad</h3>
+        </div>
+        <div class="course-item">
+          <img src="images/curso3.jpg" alt="Curso 3">
+          <p>Clase 26 de 27</p>
+          <h3>Arquitectura con Funciones</h3>
+        </div>
+     
+      </div>
+    </section>  -->
+
+    <!-- <section class="routes-section">
+      <h2>Mis Rutas</h2>
+      <div class="route-list">
+        <div class="route-item">
+          <h3>Cursos Exclusivos</h3>
+          <p>4 cursos - Ruta de Ingeniería</p>
+        </div>
+        <div class="route-item">
+          <h3>Seguridad Informática</h3>
+          <p>22 cursos - Ruta de Ingeniería</p>
+        </div>
+        
+      </div>
+    </section> -->
+
+    <!-- <section class="schools-section">
+      <h2>Descubre las Escuelas</h2>
+      <div class="schools-list">
+        <a href="#">Desarrollo Web</a>
+        <a href="#">Ciberseguridad</a>
+        <a href="#">Marketing Digital</a>
+        
+      </div>
+    </section> -->
+  
+
+    <section class="all-courses-section">
+      <h2>Todos los Cursos</h2>
+      <div id="courses-container" class="course-list">
+        <!-- Aquí se añadirán dinámicamente los cursos en forma de cards -->
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+    <!-- Incluye el script de verificación del token -->
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
