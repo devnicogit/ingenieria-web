@@ -19,6 +19,9 @@ router.get('/me', authenticateToken, userController.getUserData);
 
 router.get('/:userId', authenticateToken, userController.getUserData);
 
+router.get('/', authenticateToken, userController.getAllUsers);
+
+
 // Endpoint para obtener los cursos en los que el usuario está inscrito
 router.get('/:id/courses', authenticateToken, async (req, res) => {
     const userId = req.params.id;
